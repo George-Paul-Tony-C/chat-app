@@ -1,17 +1,13 @@
 {
   "name": "chat-app",
   "version": "1.0.0",
-  "description": "A full-stack chat application",
   "main": "index.js",
   "scripts": {
-    "start:backend": "cd backend && npm run dev",
-    "start:frontend": "cd frontend && npm run dev",
-    "dev": "concurrently \"npm run start:backend\" \"npm run start:frontend\""
+    "build":"npm install --prefix backend && npm install --prefix frontend && npm run build --prefix frontend",
+    "start":"npm run start --prefix backend"
   },
-  "dependencies": {},
-  "devDependencies": {
-    "concurrently": "^8.2.0"
-  },
-  "author": "Your Name",
-  "license": "MIT"
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }

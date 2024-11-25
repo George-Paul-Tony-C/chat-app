@@ -4,7 +4,7 @@ import { useChatStore } from "../store/useChatStore";
 import Sidebar from "../components/Sidebar";
 import NoChatSelected from "../components/NoChatSelected";
 import ChatContainer from "../components/ChatContainer";
-import Navbar from "../components/Navbar"; // Import the Navbar component
+import Navbar from "../components/Navbar";
 
 const HomePage = () => {
   const { selectedUser } = useChatStore();
@@ -20,7 +20,7 @@ const HomePage = () => {
       <Navbar toggleSidebar={toggleSidebar} />
 
       {/* Main Content Area */}
-      <div className="flex flex-1 pt-16"> {/* Add pt-16 to account for Navbar height */}
+      <div className="flex flex-1 pt-16"> {/* Adjusted padding to match Navbar height */}
         {/* Sidebar */}
         <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
 

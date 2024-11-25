@@ -9,7 +9,7 @@ const Navbar = ({ toggleSidebar }) => { // Receive toggleSidebar as a prop
 
   return (
     <header
-      className="bg-base-100 border-b border-base-300 fixed w-full top-0 z-40 
+      className="bg-base-100 border-b border-base-300 fixed w-full top-0 z-50 
       backdrop-blur-lg bg-base-100/80 transition-colors duration-300"
     >
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">

@@ -1,5 +1,5 @@
+// App.jsx
 import Navbar from "./components/Navbar";
-
 import HomePage from "./pages/HomePage";
 import SignUpPage from "./pages/SignUpPage";
 import LoginPage from "./pages/LoginPage";
@@ -28,13 +28,13 @@ const App = () => {
 
   if (isCheckingAuth && !authUser)
     return (
-      <div className="flex items-center justify-center h-screen">
-        <Loader className="size-10 animate-spin" />
+      <div className="flex items-center justify-center h-screen bg-base-200 animate-fadeIn">
+        <Loader className="size-10 animate-spin text-primary" />
       </div>
     );
 
   return (
-    <div data-theme={theme}>
+    <div data-theme={theme} className="transition-colors duration-500">
       <Navbar />
 
       <Routes>
@@ -45,7 +45,7 @@ const App = () => {
         <Route path="/profile" element={authUser ? <ProfilePage /> : <Navigate to="/login" />} />
       </Routes>
 
-      <Toaster />
+      <Toaster position="top-right" reverseOrder={false} />
     </div>
   );
 };
